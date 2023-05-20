@@ -1,0 +1,91 @@
+$body-font-family: 'Assistant', sans-serif;
+$heading-font-family: 'Heebo', sans-serif;
+@use "colors" as systemColors;
+
+body{
+  font-family: $body-font-family;
+  font-family: $heading-font-family;
+}
+
+  h1,
+  p{
+    color: systemColors.$accent-color;
+  }
+
+  h1{
+    font-weight: 900;
+    font-size: 38px;
+  }
+
+  p{
+    font-size: 16px;
+  }
+  span{
+    color: systemColors.$primary-color;
+  }
+
+  .full-control{
+    display: flex;
+    flex-direction:column-reverse;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .info-control{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  input{
+    border: 0;
+    border-bottom: 2px solid systemColors.$primary-color;
+    outline: 0;
+    background-color: #F6F6F6;
+    margin: 5px;
+  }
+
+  label{
+    margin: 6px;
+    color: $accent-color;
+    font-size: 12px;
+  }
+
+  #btm-control{
+    background-color: systemColors.$primary-color;
+    color: white;
+    font-size: 12px;
+    padding-top: 4px;
+    margin: 5px;
+  }
+
+  img{
+    max-width: 1085px;
+    max-height: 1081px;
+  }
+
+  @media screen and (min-width: 1105px){
+    h1{
+        font-size: 48px;
+    }
+    .full-control{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .info-control{
+      margin: 170px;
+      align-items: flex-start;
+    }
+    lable{
+        font-size: 12px;
+    }
+
+    img{
+      max-width: 50%;
+      height: auto;
+    }
+  }
+
